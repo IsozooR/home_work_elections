@@ -9,12 +9,12 @@ try:
     age = int(input("Please enter your age: "))
     disqualified = input("Are you disqualified? (y/n): ")
     citizen = input("Are you a citizen? (n/y): ")
-
-    disqualified = disqualified.lower()
-    citizen = citizen.lower()
 except ValueError:
     print("Please enter your age again")
     exit()
+
+disqualified = disqualified.lower()
+citizen = citizen.lower()
 
 if disqualified in ("y", "n") and citizen in ("y", "n"):
     print(elections(age, disqualified, citizen))
